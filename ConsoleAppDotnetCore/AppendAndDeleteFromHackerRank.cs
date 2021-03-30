@@ -30,7 +30,7 @@ namespace ConsoleAppDotnetCore
         return;
       }
 
-      if (k == minOps || (k - minOps) % 2 == 0)
+      if (k == minOps) // || (k - minOps) % 2 == 0)
       {
         Console.WriteLine("Yes");
         return;
@@ -62,7 +62,6 @@ namespace ConsoleAppDotnetCore
 
       Console.WriteLine(count);
     }
-
 
     public static List<int> FindFactors(int num)
     {

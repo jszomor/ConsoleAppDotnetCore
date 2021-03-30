@@ -7,13 +7,13 @@ namespace ConsoleAppDotnetCore
     static void Main(string[] args)
     {
 
-      var practice = new Practice();
+      //var practice = new Practice();
 
-      string s = "asdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcv"; // "hackerhappy"; //Console.ReadLine();
+      string s = "aaaaaaaaaa"; //"asdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcv"; // "hackerhappy"; //Console.ReadLine();
 
-      string t = "asdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcv"; //"hackerrank"; //Console.ReadLine();
+      string t = "aaaaa"; //"asdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcv"; //"hackerrank"; //Console.ReadLine();
 
-      int k = 20; //9;  //Convert.ToInt32(Console.ReadLine());
+      int k = 7; //9;  //Convert.ToInt32(Console.ReadLine());
 
 
       //string result = practice.AppendAndDelete(s, t, k);
