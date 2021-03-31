@@ -4,9 +4,9 @@ using System.Text;
 
 namespace ConsoleAppDotnetCore
 {
-  public class Practice
+  public static class Practice
   {
-    public string AppendAndDelete(string s, string t, int k)
+    public static string AppendAndDelete(string s, string t, int k)
     {
 
       if(s == t)
@@ -54,5 +54,26 @@ namespace ConsoleAppDotnetCore
     }
 
 
+    public static string Encryption(string input)
+    {
+
+      //string input = "haveaniceday";
+
+
+      double L = Math.Sqrt(input.Length);
+      Console.WriteLine(L);
+
+      char[] a = new char[input.Length]; 
+
+      int column = Convert.ToInt32(Math.Round(L, MidpointRounding.ToPositiveInfinity));
+      int row = Convert.ToInt32(Math.Round(L, MidpointRounding.ToNegativeInfinity));
+
+      for (int i = 0; i < column; i++)
+      {
+         //a = input[i];
+      }
+
+      return null;
+    }
   }
 }
