@@ -63,14 +63,14 @@ namespace ConsoleAppDotnetCore
       double L = Math.Sqrt(input.Length);
       Console.WriteLine(L);
 
-      char[] a = new char[input.Length]; 
+      //char[] a = new char[input.Length]; 
 
       int column = Convert.ToInt32(Math.Round(L, MidpointRounding.ToPositiveInfinity));
       int row = Convert.ToInt32(Math.Round(L, MidpointRounding.ToNegativeInfinity));
 
-      for (int i = 0; i < column; i++)
+      for (int i = 0; i < input.Length; i+=column)
       {
-         //a = input[i];
+         char a = input[i];
       }
 
       return null;
