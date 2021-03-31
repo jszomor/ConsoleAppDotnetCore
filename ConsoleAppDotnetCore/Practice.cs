@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ConsoleAppDotnetCore
@@ -58,22 +59,47 @@ namespace ConsoleAppDotnetCore
     {
 
       //string input = "haveaniceday";
+      //output: hae and via ecy
 
+      //feedthedog
+      //fto ehg ee dd
+
+      //chillout
+      //clu hlt io
 
       double L = Math.Sqrt(input.Length);
       Console.WriteLine(L);
 
-      //char[] a = new char[input.Length]; 
-
-      int column = Convert.ToInt32(Math.Round(L, MidpointRounding.ToPositiveInfinity));
-      int row = Convert.ToInt32(Math.Round(L, MidpointRounding.ToNegativeInfinity));
-
-      for (int i = 0; i < input.Length; i+=column)
+      var builder = new StringBuilder();
+      int column = Convert.ToInt32(Math.Ceiling(L));
+      int row = Convert.ToInt32(Math.Floor(L));
+      for (int j = 0; j < column; j++)
       {
-         char a = input[i];
+        for (int i = j; i < input.Length; i+=column)
+        {
+          builder.Append(input[i]);
+        }
+        builder.Append(" ");
       }
 
-      return null;
+      return Convert.ToString(builder);
+    }
+
+    public static string TheBiggerIsGreater(string input)
+    {
+
+
+
+      // Convert to char array.
+      char[] a = input.ToCharArray();
+
+      // Sort letters.
+      Array.Sort(a);
+
+      string output = new string(a);
+      // Return modified string.
+      return output;
+
     }
   }
 }

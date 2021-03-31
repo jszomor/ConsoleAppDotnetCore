@@ -7,12 +7,13 @@ namespace ConsoleAppDotnetCore
     static void Main(string[] args)
     {
 
-      string input = "haveaniceday";
+      //string input = "haveaniceday";
 
-      Practice.Encryption(input);
+      //Console.WriteLine(Practice.Encryption(input));
 
+      string input2 = "ba";
 
-
+      Practice.TheBiggerIsGreater(input2);
 
       //var practice = new Practice();
 
