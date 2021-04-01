@@ -7,6 +7,9 @@ namespace ConsoleAppDotnetCore
     static void Main(string[] args)
     {
 
+      Occurrences.CountWordOccurencyForLoop();
+
+
       //string input = "haveaniceday";
 
       //Console.WriteLine(Practice.Encryption(input));
@@ -18,7 +21,7 @@ namespace ConsoleAppDotnetCore
 
       string input2 = "dcbb";
 
-      Console.WriteLine(Practice.TheBiggerIsGreater2(input2));
+      //Console.WriteLine(Practice.TheBiggerIsGreater2(input2));
 
       //var practice = new Practice();
 
