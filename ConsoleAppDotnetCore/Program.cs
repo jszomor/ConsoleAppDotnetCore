@@ -11,9 +11,14 @@ namespace ConsoleAppDotnetCore
 
       //Console.WriteLine(Practice.Encryption(input));
 
-      string input2 = "ba";
+      //abchgfeaaaa
 
-      Practice.TheBiggerIsGreater(input2);
+      //no >>> dcba
+      //no >>> dcbb
+
+      string input2 = "dcbb";
+
+      Console.WriteLine(Practice.TheBiggerIsGreater2(input2));
 
       //var practice = new Practice();
 

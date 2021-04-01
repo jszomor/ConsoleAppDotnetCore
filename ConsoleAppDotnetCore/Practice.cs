@@ -87,19 +87,118 @@ namespace ConsoleAppDotnetCore
 
     public static string TheBiggerIsGreater(string input)
     {
+      //abchgfeaaaa
+
+      //no >>> dcba
+      //no >>> dcbb
+
+      var inputArray = input.ToCharArray();
+
+      int pivot = input.Length-1;
+      // Find longest non-increasing suffix
+      while (pivot > 0)
+      {
+        char jchar = input[pivot];
+        char jcharNext = input[pivot - 1];
+
+        if (jchar <= jcharNext)
+        {
+          pivot--;
+        }
+        else
+        {
+          break;
+        }
+      }
+      // Now pivot is the head index of the suffix
+
+      // Are we at the last permutation already?
+      if (pivot <= 0)
+      {
+        return "no answer";
+      }
+
+      char temp;
+
+      // Let array[pivot - 1] be the real pivot
+      // Find rightmost element greater than the pivot and swap
+      for (int j = input.Length - 1; j > 0; j--)
+      {
+        if(inputArray[pivot-1] < inputArray[j])
+        {
+          temp = inputArray[pivot-1];
+          inputArray[pivot-1] = inputArray[j];
+          inputArray[j] = temp;
+          break;
+        }
+      }
+
+      // Reverse the suffix
+      int swap = input.Length - 1;
+      while(pivot < swap)
+      {
+        temp = inputArray[pivot];
+        inputArray[pivot] = inputArray[swap];
+        inputArray[swap] = temp;
+        pivot++;
+        swap--;
+      }
 
 
+      return new string(inputArray);
+    }
 
-      // Convert to char array.
-      char[] a = input.ToCharArray();
+    public static string TheBiggerIsGreater2(string input)
+    {
+      //abchgfeaaaa
+      //dkhc
+      //no >>> dcba
+      //no >>> dcbb
 
-      // Sort letters.
-      Array.Sort(a);
+      var inputArray = input.ToCharArray();
 
-      string output = new string(a);
-      // Return modified string.
-      return output;
+      int pivot = input.Length - 1;
 
+      // Find longest non-increasing suffix
+      while (pivot > 0 && input[pivot] <= input[pivot - 1])
+      {
+        pivot--;
+      }
+      // Now pivot is the head index of the suffix
+
+      // Are we at the last permutation already?
+      if (pivot <= 0)
+      {
+        return "no answer";
+      }
+
+      // Let array[pivot - 1] be the real pivot
+      // Find rightmost element greater than the pivot
+      char temp;
+      int j = input.Length - 1;
+      while (inputArray[pivot - 1] >= inputArray[j])
+      {
+        j--;
+      }
+
+      // Swap the pivot with j
+      temp = inputArray[pivot - 1];
+      inputArray[pivot - 1] = inputArray[j];
+      inputArray[j] = temp;
+
+      // Reverse the suffix
+      int swap = input.Length - 1;
+      while (pivot < swap)
+      {
+        temp = inputArray[pivot];
+        inputArray[pivot] = inputArray[swap];
+        inputArray[swap] = temp;
+        pivot++;
+        swap--;
+      }
+
+
+      return new string(inputArray);
     }
   }
 }
