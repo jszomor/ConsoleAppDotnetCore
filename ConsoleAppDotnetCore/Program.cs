@@ -7,8 +7,13 @@ namespace ConsoleAppDotnetCore
     static void Main(string[] args)
     {
 
-      Occurrences.CountWordOccurencyForLoop();
+      //Occurrences.CountWordOccurencyForLoop();
 
+      //Occurrences.FindSpecificWordInCollectionLINQ();
+
+      Occurrences.CountWordDict();
+
+      Occurrences.WordCountLINQ();
 
       //string input = "haveaniceday";
 
@@ -19,7 +24,7 @@ namespace ConsoleAppDotnetCore
       //no >>> dcba
       //no >>> dcbb
 
-      string input2 = "dcbb";
+      //string input2 = "dcbb";
 
       //Console.WriteLine(Practice.TheBiggerIsGreater2(input2));
 
