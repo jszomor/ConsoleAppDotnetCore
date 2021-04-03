@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -26,19 +27,19 @@ namespace ConsoleAppDotnetCore
       };
 
       Array.Sort(words);
-      string check = null; 
+      string check = null;
       for (int i = 0; i < words.Length; i++)
       {
         int count = 1;
-        for (int j = i+1; j < words.Length; j++)
+        for (int j = i + 1; j < words.Length; j++)
         {
           if (words[i] == words[j])
-           {
+          {
             count++;
           }
           else break;
         }
-        if(words[i] != check)
+        if (words[i] != check)
         {
           Console.WriteLine($"{words[i]}, {count}");
           check = words[i];
@@ -91,7 +92,7 @@ namespace ConsoleAppDotnetCore
           @" IntelliSense support in the IDE. Transferring data from SQL tables or XML trees to" +
           @" objects in memory is often tedious and error-prone.";
 
-      string[] source = text.Split(new char[] {'.', ',', ' ', '?', '!', '/' }, StringSplitOptions.RemoveEmptyEntries);
+      string[] source = text.Split(new char[] { '.', ',', ' ', '?', '!', '/' }, StringSplitOptions.RemoveEmptyEntries);
 
       source = source.Select(s => s.ToLower()).ToArray();
 
@@ -105,9 +106,9 @@ namespace ConsoleAppDotnetCore
 
       var statistics = new Dictionary<string, int>();
 
-      foreach(var word in source)
+      foreach (var word in source)
       {
-        if(!statistics.ContainsKey(word))
+        if (!statistics.ContainsKey(word))
         {
           statistics.Add(word, 1);
         }
@@ -117,13 +118,10 @@ namespace ConsoleAppDotnetCore
         }
       }
 
-      statistics = statistics.OrderBy(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+      statistics = statistics.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
 
-      //var statistics2 = from entry in statistics orderby entry.Value descending select entry;
-
-      for (int i = statistics.Count-1; i > 0; i-- )
+      for (int i = 0; i < 5; i++)
       {
-        if(statistics.Count - i <= 5)
         Console.WriteLine($"{statistics.ElementAt(i).Key}: {statistics.ElementAt(i).Value}");
       }
     }
@@ -141,15 +139,47 @@ namespace ConsoleAppDotnetCore
           @" IntelliSense support in the IDE. Transferring data from SQL tables or XML trees to" +
           @" objects in memory is often tedious and error-prone.";
 
-      string[] source = text.Split(new char[] { '.', ',', ' ', '?', '!', '/' }, StringSplitOptions.RemoveEmptyEntries);
+      string[] source = text.ToLower().Split(new char[] { '.', ',', ' ', '?', '!', '/' }, StringSplitOptions.RemoveEmptyEntries);
 
       var query = (from i in source
                    group i by i into g
                    orderby g.Count() descending
-                   select new { Key = g.Key, Count = g.Count() }).FirstOrDefault();
+                   select new { Key = g.Key, Count = g.Count() }).ToList();
 
-      if (query == null) Console.WriteLine("query = NULL");
-      else Console.WriteLine($"The word '{query.Key}' occurs '{query.Count}' times.");
+      for (int i = 0; i < 5; i++)
+      {
+        Console.WriteLine(source[i]);
+      }
+    }
+
+    public static void WordCountLINQ2()
+    {
+      string[] texts = new string[]
+      { 
+        @"Historically, the world of data and The world of objects" +
+        @" have not been well integrated. Programmers work in C# or Visual Basic" +
+        @" and also in SQL or XQuery. On the one side are concepts such as classes," +
+        @" objects, fields, inheritance, and .NET APIs. On the other side" +
+        @" are tables, columns, rows, nodes, and separate languages for dealing with" +
+        @" them. Data types often require translation between the two worlds; there are" +
+        @" different standard functions. Because the object world has no notion of query, a" +
+        @" query can only be represented as a string without compile-time type checking or" +
+        @" IntelliSense support in the IDE. Transferring data from SQL tables or XML trees to" +
+        @" objects in memory is often tedious and error-prone."
+      };
+
+
+      var result = (from line in texts
+                     let words = line.ToLower().Split(new char[] { '.', ',', ' ', '?', '!', '/', ';' }, StringSplitOptions.RemoveEmptyEntries)
+                     from word in words
+                     group word by word into g
+                     orderby g.Count() descending
+                     select new { Word = g.Key, Occurance = g.Count() }).ToList();
+
+      for (int i = 0; i < 5; i++)
+      {
+        Console.WriteLine(result[i]);
+      }
     }
   }
 }

@@ -6,14 +6,13 @@ namespace ConsoleAppDotnetCore
   {
     static void Main(string[] args)
     {
-
       //Occurrences.CountWordOccurencyForLoop();
 
       //Occurrences.FindSpecificWordInCollectionLINQ();
 
-      Occurrences.CountWordDict();
+      //Occurrences.CountWordDict();
 
-      Occurrences.WordCountLINQ();
+      Occurrences.WordCountLINQ2();
 
       //string input = "haveaniceday";
 
