@@ -26,7 +26,7 @@ namespace ConsoleAppDotnetCore
           "wristwatches",
       };
 
-      Array.Sort(words);
+      System.Array.Sort(words);
       string check = null;
       for (int i = 0; i < words.Length; i++)
       {

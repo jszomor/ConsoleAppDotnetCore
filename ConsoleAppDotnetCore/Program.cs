@@ -12,7 +12,13 @@ namespace ConsoleAppDotnetCore
 
       //Occurrences.CountWordDict();
 
-      Occurrences.WordCountLINQ2();
+      int[] numbers = new int[] { 3, 9, 4, 6, 8, 11 };
+
+      var quickSort = new Array(numbers);
+
+      quickSort.Sort();
+
+      //Occurrences.WordCountLINQ2();
 
       //string input = "haveaniceday";
 
