@@ -92,17 +92,7 @@ namespace ConsoleAppDotnetCore
           @" IntelliSense support in the IDE. Transferring data from SQL tables or XML trees to" +
           @" objects in memory is often tedious and error-prone.";
 
-      string[] source = text.Split(new char[] { '.', ',', ' ', '?', '!', '/' }, StringSplitOptions.RemoveEmptyEntries);
-
-      source = source.Select(s => s.ToLower()).ToArray();
-
-      //source = Array.ConvertAll(source, x => x.ToLower());
-
-      //source = source.OrderByDescending(s => s).ToArray();
-
-      //source = source.OrderBy(s => s).ToArray();
-
-      //Array.Sort(source);
+      string[] source = text.ToLower().Split(new char[] { '.', ',', ' ', '?', '!', '/' }, StringSplitOptions.RemoveEmptyEntries);
 
       var statistics = new Dictionary<string, int>();
 
