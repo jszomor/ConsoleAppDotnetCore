@@ -4,24 +4,13 @@ using System.Text;
 
 namespace ConsoleAppDotnetCore
 {
-  public class Array
+  public class MyArray
   {
     private int[] Numbers;
 
-    public Array(int[] numbers)
+    public MyArray(int[] numbers)
     {
       Numbers = numbers;
-    }
-
-    public int this[int idx]
-    {
-      get { return Numbers[idx]; }
-      set { Numbers[idx] = value; }
-    }
-
-    public int Length
-    {
-      get { return Numbers.Length; }
     }
 
     public void Sort()
@@ -59,6 +48,7 @@ namespace ConsoleAppDotnetCore
           --right;
         }
       }
+
       Numbers[left] = pivot;
       pivot = left;
       left = lhold;

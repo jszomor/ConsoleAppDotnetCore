@@ -158,7 +158,6 @@ namespace ConsoleAppDotnetCore
         @" objects in memory is often tedious and error-prone."
       };
 
-
       var result = (from line in texts
                      let words = line.ToLower().Split(new char[] { '.', ',', ' ', '?', '!', '/', ';' }, StringSplitOptions.RemoveEmptyEntries)
                      from word in words
