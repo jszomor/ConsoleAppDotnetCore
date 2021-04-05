@@ -85,5 +85,10 @@ namespace ConsoleAppDotnetCore
       action(root.Value);
       _inOrder(root.Right, action);
     }
+
+    public void Print(int value)
+    {
+      Console.WriteLine(value);
+    }
   }
 }

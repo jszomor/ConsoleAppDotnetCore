@@ -15,7 +15,7 @@ namespace ConsoleAppDotnetCore
       int[] numbers = new int[] { 10, 1, 4, 6, 6, 3, 9, 12 };
 
       var binaryTree = new BinaryTree(numbers);
-
+      binaryTree.InOrder(binaryTree.Print);
 
       //var quickSort = new MyArray(numbers);
 
