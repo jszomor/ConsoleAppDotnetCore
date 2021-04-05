@@ -17,6 +17,9 @@ namespace ConsoleAppDotnetCore
       var binaryTree = new BinaryTree(numbers);
       binaryTree.InOrder(binaryTree.Print);
 
+      //var aaronjwood = new aaronjwoodBinarySearchTree.BinarySearchTree();
+      //aaronjwood.Start();
+
       //var quickSort = new MyArray(numbers);
 
       //quickSort.Sort();
@@ -26,33 +29,9 @@ namespace ConsoleAppDotnetCore
       //  Console.WriteLine(item);
       //}
 
-      //while(true)
-      //{
-      //  Console.WriteLine("Enter the first word.");
-      //  string word1 = Console.ReadLine();
-      //  Console.WriteLine("Enter the second word.");
-      //  string word2 = Console.ReadLine();
 
-      //  Words words = new Words(word1, word2);
-      //  var anag = new Anagram();
-      //  anag.CompareAnagram(words);
-      //  string answer;
-      //  while (true)
-      //  {
-      //    Console.WriteLine("Wants to try again?(Y/N)");
-      //    answer = Console.ReadLine();
-
-      //    if (answer != "Y" && answer != "N")
-      //    {
-      //      Console.WriteLine("Invalid answer. Please select letter [Y] for keep continue or letter [N] for exit");
-      //    }
-      //    else
-      //      break;
-      //  }
-
-      //  if (answer == "N")
-      //    break;
-      //}
+      //var anag = new Anagram();
+      //anag.Start(anag);
 
       //Occurrences.WordCountLINQ2();
 

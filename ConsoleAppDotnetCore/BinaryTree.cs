@@ -12,7 +12,7 @@ namespace ConsoleAppDotnetCore
       Value = value;
     }
 
-    public TreeNode Parent { get; set; }
+    //public TreeNode Parent { get; set; }
     public TreeNode Left { get; set; }
     public TreeNode Right { get; set; }
   }
@@ -46,7 +46,7 @@ namespace ConsoleAppDotnetCore
             if (current.Left == null)
             {
               current.Left = new TreeNode(value);
-              current.Left.Parent = current;
+              //current.Left.Parent = current;
               return;
             }
             else
@@ -59,7 +59,7 @@ namespace ConsoleAppDotnetCore
             if (current.Right == null)
             {
               current.Right = new TreeNode(value);
-              current.Right.Parent = current;
+              //current.Right.Parent = current;
               return;
             }
             else

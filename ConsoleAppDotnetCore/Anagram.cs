@@ -5,7 +5,6 @@ using System.Text;
 
 namespace ConsoleAppDotnetCore
 {
-
   public class Words
   {
     public string Word1 { get; set; }
@@ -37,5 +36,36 @@ namespace ConsoleAppDotnetCore
     }
 
     private string OrderString(string word) => string.Concat(word.ToLower().OrderBy(l => l));
+
+    public void Start(Anagram anag)
+    {
+      while (true)
+      {
+        Console.WriteLine("Enter the first word.");
+        string word1 = Console.ReadLine();
+        Console.WriteLine("Enter the second word.");
+        string word2 = Console.ReadLine();
+
+        Words words = new Words(word1, word2);
+        
+        anag.CompareAnagram(words);
+        string answer;
+        while (true)
+        {
+          Console.WriteLine("Wants to try again?(Y/N)");
+          answer = Console.ReadLine();
+
+          if (answer != "Y" && answer != "N")
+          {
+            Console.WriteLine("Invalid answer. Please select letter [Y] for keep continue or letter [N] for exit");
+          }
+          else
+            break;
+        }
+
+        if (answer == "N")
+          break;
+      }
+    }
   }
 }
