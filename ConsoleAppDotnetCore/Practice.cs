@@ -7,53 +7,6 @@ namespace ConsoleAppDotnetCore
 {
   public static class Practice
   {
-    public static string AppendAndDelete(string s, string t, int k)
-    {
-
-      if(s == t)
-      {
-        return "Yes";
-      }
-
-      else if(s == t && s.Length + t.Length <= k)
-      {
-        return "Yes";
-      }
-
-      else if(s.Length > t.Length && s.Length + t.Length <= k)
-      {
-        return "Yes";
-      }
-
-      else
-      {
-        return "No";
-      }
-
-
-
-
-      //TestCases
-
-      //(the initial string) s = asdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcv
-      //(the desired string) t = bsdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcv
-      //k = 100
-      //"No"
-      //8. testCase
-
-      //s = asdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcv
-      //t = asdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcvasdfqwertyuighjkzxcv
-      //k = 20
-      //"Yes"
-      //7. testCase
-
-      //s = uoiauwrebgiwrhgiuawheirhwebvjforidkslweufgrhvjqasw
-      //t = vgftrheydkoslwezxcvdsqjkfhrydjwvogfheksockelsnbkeq
-      //k = 100
-      //"Yes"
-      //11. testCase
-    }
-
     public static string Encryption(string input)
     {
 
@@ -85,69 +38,6 @@ namespace ConsoleAppDotnetCore
     }
 
     public static string TheBiggerIsGreater(string input)
-    {
-      //abchgfeaaaa
-
-      //no >>> dcba
-      //no >>> dcbb
-
-      var inputArray = input.ToCharArray();
-
-      int pivot = input.Length-1;
-      // Find longest non-increasing suffix
-      while (pivot > 0)
-      {
-        char jchar = input[pivot];
-        char jcharNext = input[pivot - 1];
-
-        if (jchar <= jcharNext)
-        {
-          pivot--;
-        }
-        else
-        {
-          break;
-        }
-      }
-      // Now pivot is the head index of the suffix
-
-      // Are we at the last permutation already?
-      if (pivot <= 0)
-      {
-        return "no answer";
-      }
-
-      char temp;
-
-      // Let array[pivot - 1] be the real pivot
-      // Find rightmost element greater than the pivot and swap
-      for (int j = input.Length - 1; j > 0; j--)
-      {
-        if(inputArray[pivot-1] < inputArray[j])
-        {
-          temp = inputArray[pivot-1];
-          inputArray[pivot-1] = inputArray[j];
-          inputArray[j] = temp;
-          break;
-        }
-      }
-
-      // Reverse the suffix
-      int swap = input.Length - 1;
-      while(pivot < swap)
-      {
-        temp = inputArray[pivot];
-        inputArray[pivot] = inputArray[swap];
-        inputArray[swap] = temp;
-        pivot++;
-        swap--;
-      }
-
-
-      return new string(inputArray);
-    }
-
-    public static string TheBiggerIsGreater2(string input)
     {
       //abchgfeaaaa
       //dkhc

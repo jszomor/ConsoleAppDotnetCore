@@ -6,8 +6,6 @@ namespace ConsoleAppDotnetCore
   {
     static void Main(string[] args)
     {
-
-
       string[] _Words = new string[]
       {
         "Historically", "the", "world", "other", "in", "string", "the", "world", "world", "world", "the",
@@ -20,7 +18,7 @@ namespace ConsoleAppDotnetCore
 
       Console.WriteLine(Practice.FibonacciLinear(30));
 
-            //Occurrences.CountWordOccurencyForLoop();
+      //Occurrences.CountWordOccurencyForLoop();
 
       //Occurrences.FindSpecificWordInCollectionLINQ();
 
