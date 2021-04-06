@@ -254,5 +254,35 @@ namespace ConsoleAppDotnetCore
         Console.WriteLine(query[i]);
       }                  
     }
+
+    public static int FibonacciRec(int n)
+    {
+      if ((0 == n) || (1 == n))
+      {
+        return n;
+      }
+      else
+      {
+        return FibonacciRec(n - 1) + FibonacciRec(n - 2);
+      }
+    }
+
+    public static double FibonacciLinear(double n)
+    {
+      if (n < 0) throw new InvalidOperationException("No negative number is allowed.");
+
+      if (n < 3) return 1;
+
+      var (a, b) = (1, 1);
+
+      while(n > 2)
+      {
+        b += a;
+        a = b - a;
+        n--;
+      }
+
+      return b;
+    }
   }
 }

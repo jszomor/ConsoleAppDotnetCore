@@ -16,7 +16,9 @@ namespace ConsoleAppDotnetCore
 
       //Practice.CountWordOccuranceDict(_Words);
 
-      Practice.CountOccuranceLINQ(_Words);
+      //Practice.CountOccuranceLINQ(_Words);
+
+      Console.WriteLine(Practice.FibonacciLinear(30));
 
             //Occurrences.CountWordOccurencyForLoop();
 
