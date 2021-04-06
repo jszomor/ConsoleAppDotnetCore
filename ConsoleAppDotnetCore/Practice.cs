@@ -54,7 +54,6 @@ namespace ConsoleAppDotnetCore
       //11. testCase
     }
 
-
     public static string Encryption(string input)
     {
 
@@ -199,6 +198,61 @@ namespace ConsoleAppDotnetCore
 
 
       return new string(inputArray);
+    }
+
+    public static bool CheckAnagram(string word1, string word2)
+    {
+      string w1 = StringConcat(word1);
+      string w2 = StringConcat(word2);
+
+      if (w1 == w2) return true;
+      else return false;
+    }
+
+    public static string StringConcat(string word) => string.Concat(word.ToLower().OrderBy(l => l));
+
+    public static void CountWordOccuranceDict(string[] words)
+    {
+      var myWords = new Dictionary<string, int>();
+
+      words = Array.ConvertAll(words, l => l.ToLower());
+
+      words = words.Select(l => l.ToLower()).ToArray();
+
+      words = (from word in words select word.ToLower()).ToArray();
+
+      foreach (var word in words)
+      {
+        if(!myWords.ContainsKey(word))
+        {
+          myWords.Add(word, 1);
+        }
+        else
+        {
+          myWords[word] += 1; // gyakorolni
+        }
+      }
+
+      myWords = myWords.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+
+      for (int i = 0; i < 5; i++)
+      {
+        Console.WriteLine($"{myWords.ElementAt(i).Key}, {myWords.ElementAt(i).Value}");
+      }
+    }
+
+    public static void CountOccuranceLINQ(string[] words)
+    {
+      var query = (from word in words
+                  let customWord = word.ToLower()
+                  group customWord by customWord into g
+                  orderby g.Count() descending
+                  select new { key = g.Key, Count = g.Count() }).ToList();
+
+      for (int i = 0; i < 5; i++)
+      {
+        Console.WriteLine(query[i]);
+      }                  
     }
   }
 }

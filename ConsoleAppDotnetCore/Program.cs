@@ -6,16 +6,28 @@ namespace ConsoleAppDotnetCore
   {
     static void Main(string[] args)
     {
-      //Occurrences.CountWordOccurencyForLoop();
+
+
+      string[] _Words = new string[]
+      {
+        "Historically", "the", "world", "other", "in", "string", "the", "world", "world", "world", "the",
+        "in", "Historically", "world", "in", "the", "the", "the", "the", "the", "in", "in", "world"
+      };
+
+      //Practice.CountWordOccuranceDict(_Words);
+
+      Practice.CountOccuranceLINQ(_Words);
+
+            //Occurrences.CountWordOccurencyForLoop();
 
       //Occurrences.FindSpecificWordInCollectionLINQ();
 
       //Occurrences.CountWordDict();
 
-      int[] numbers = new int[] { 10, 1, 4, 6, 6, 3, 9, 12 };
+      //int[] numbers = new int[] { 10, 1, 4, 6, 6, 3, 9, 12 };
 
-      var binaryTree = new BinaryTree(numbers);
-      binaryTree.InOrder(binaryTree.Print);
+      //var binaryTree = new BinaryTree(numbers);
+      //binaryTree.InOrder(binaryTree.Print);
 
       //var quickSort = new MyArray(numbers);
 
