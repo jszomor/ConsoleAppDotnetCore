@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace ConsoleAppDotnetCore
 {
@@ -6,6 +7,13 @@ namespace ConsoleAppDotnetCore
   {
     static void Main(string[] args)
     {
+
+      //string abc = "abc";
+
+      //var query = from letter in abc
+      //            let a = letter.ToString().ToLower().OrderBy(x => x)
+      //            select a;
+
       //string[] _Words = new string[]
       //{
       //  "Historically", "the", "world", "other", "in", "string", "the", "world", "world", "world", "the",
@@ -24,9 +32,9 @@ namespace ConsoleAppDotnetCore
 
       //Occurrences.CountWordDict();
 
-      int[] numbers = new int[] { 10, 1, 4, 6, 6, 3, 9, 12 };
+      //int[] numbers = new int[] { 10, 1, 4, 6, 6, 3, 9, 12 };
 
-      var linkedList = new LinkedList(numbers);
+      //var linkedList = new LinkedList(numbers);
 
       //var binaryTree = new BinaryTree(numbers);
       //binaryTree.InOrder(binaryTree.Print);
@@ -44,8 +52,8 @@ namespace ConsoleAppDotnetCore
       //}
 
 
-      //var anag = new Anagram();
-      //anag.Start(anag);
+      var anag = new Anagram();
+      anag.Start(anag);
 
       //Occurrences.WordCountLINQ2();
 

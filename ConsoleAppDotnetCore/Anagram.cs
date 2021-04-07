@@ -23,7 +23,9 @@ namespace ConsoleAppDotnetCore
       string w1 = OrderString(words.Word1);
       string w2 = OrderString(words.Word2);
 
-      if (w1 == w2)
+      int equal = string.Compare(w1, w2);
+
+      if (equal == 0)
       {
         Console.WriteLine("Entered words are anagrams of each other!");
         return true;
