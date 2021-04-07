@@ -8,6 +8,64 @@ namespace ConsoleAppDotnetCore
     static void Main(string[] args)
     {
 
+      int num2 = 1234, r;
+      while (num2 > 0)
+      {
+        r = num2 % 10;
+        num2 = num2 / 10;
+        Console.WriteLine(+r);
+      }
+
+
+      bool OxB = Convert.ToBoolean(Convert.ToInt32(0xc));
+      bool OZZ = Convert.ToBoolean(Convert.ToInt32(022));
+      bool xeb = Convert.ToBoolean(Convert.ToInt32('\xeb'));
+
+
+      int a = Convert.ToInt32(0xc);
+      int b = Convert.ToInt32(022);
+      int c = Convert.ToInt32('\xc');
+
+      if (OxB)
+        if (OZZ)
+          if (xeb)
+            Console.WriteLine("If executed Successfully");
+          else;
+        else;
+      else;
+
+
+      int a2 = 1, b2 = 2;
+
+      //a2 = Convert.ToInt32(++a2);
+      //b2 = Convert.ToInt32(++b2);
+
+      if (Convert.ToBoolean(Convert.ToInt32(++a2)) || Convert.ToBoolean(Convert.ToInt32(++b2)))
+      {
+        Console.WriteLine(a2 + "\n" + b2);
+      }
+      else
+        Console.WriteLine(" C# questions ");
+
+
+
+
+      int i;
+      int div = 8, num = 32;
+      for (i = 0; i <= 10; i++)
+      {
+        if ((num / div * 3) == 6)
+        {
+          Console.WriteLine(i + " ");
+          continue;
+        }
+        else if (i != 5)
+          Console.Write(i + " ");
+        else
+          break;
+      }
+      Console.ReadLine();
+
       //string abc = "abc";
 
       //var query = from letter in abc
