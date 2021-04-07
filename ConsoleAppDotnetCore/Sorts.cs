@@ -4,11 +4,11 @@ using System.Text;
 
 namespace ConsoleAppDotnetCore
 {
-  public class MyArray
+  public class Sorts
   {
     private int[] Numbers;
 
-    public MyArray(int[] numbers)
+    public Sorts(int[] numbers)
     {
       Numbers = numbers;
     }
