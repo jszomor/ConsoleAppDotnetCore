@@ -66,6 +66,7 @@ namespace ConsoleAppDotnetCore
         if(current.Next.Value == value)
         {
           current.Next = current.Next.Next;
+          current.Next.Previous = current.Next.Previous.Previous;
           return;
         }
 
