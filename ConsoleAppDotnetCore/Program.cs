@@ -1,12 +1,99 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ConsoleAppDotnetCore
 {
+  public class BaseballTeam
+  {
+    private string[] players = new string[9];
+    private readonly List<string> positionAbbreviations = new List<string>
+        {
+            "P", "C", "1B", "2B", "3B", "SS", "LF", "CF", "RF"
+        };
+
+    public string this[int position]
+    {
+      // Baseball positions are 1 - 9.
+      get { return players[position - 1]; }
+      set { players[position - 1] = value; }
+    }
+    public string this[string position]
+    {
+      get { return players[positionAbbreviations.IndexOf(position)]; }
+      set { players[positionAbbreviations.IndexOf(position)] = value; }
+    }
+  }
+
   class Program
   {
+
+    static int X { get; set; } = 5;
+    static int Y = 10;
+
+    private Program()
+    {
+
+    }
+
+    static void ABC()
+    {
+
+    }
+    static public void Method(int refArgument)
+    {
+      refArgument = refArgument + 44;
+    }
+
     static void Main(string[] args)
     {
+
+      int number = 1;
+      Method(number);
+      Console.WriteLine(number);
+
+
+      var team = new BaseballTeam
+      {
+        ["RF"] = "Mookie Betts",
+        [4] = "Jose Altuve",
+        ["CF"] = "Mike Trout"
+      };
+
+      Console.WriteLine(team[4]);
+
+
+      uint x2 = 10;
+
+      uint y2 = x2 >> 1;
+
+      Console.WriteLine($"{Program.X}, {Program.Y}");
+
+      Program.ABC();
+
+      int i3 = 1, j3 = 1;
+      while (++i3 <= 10)
+      {
+        j3++;
+      }
+      Console.WriteLine(i3 + "  " + j3);
+    
+
+    int i = 30;
+      int j = 5 % 5;
+      double z = Convert.ToInt32(i >= j); // success
+
+      if (Convert.ToBoolean(Convert.ToInt32(i != j)))
+      {
+        Console.WriteLine("if Clause executed");
+      }
+      else
+      {
+        Console.WriteLine("else Clause executed");
+      }
+      Console.WriteLine("Entered Main Function");
+      Console.ReadLine();
+
 
       int num2 = 1234, r;
       while (num2 > 0)
@@ -24,7 +111,7 @@ namespace ConsoleAppDotnetCore
 
       int a = Convert.ToInt32(0xc);
       int b = Convert.ToInt32(022);
-      int c = Convert.ToInt32('\xc');
+      int c2 = Convert.ToInt32('\xc');
 
       if (OxB)
         if (OZZ)
@@ -40,7 +127,7 @@ namespace ConsoleAppDotnetCore
       //a2 = Convert.ToInt32(++a2);
       //b2 = Convert.ToInt32(++b2);
 
-      if (Convert.ToBoolean(Convert.ToInt32(++a2)) || Convert.ToBoolean(Convert.ToInt32(++b2)))
+      if (false || Convert.ToBoolean(Convert.ToInt32(++b2)))
       {
         Console.WriteLine(a2 + "\n" + b2);
       }
@@ -50,16 +137,16 @@ namespace ConsoleAppDotnetCore
 
 
 
-      int i;
+      int e;
       int div = 8, num = 32;
-      for (i = 0; i <= 10; i++)
+      for (e = 0; e <= 10; e++)
       {
         if ((num / div * 3) == 6)
         {
-          Console.WriteLine(i + " ");
+          Console.WriteLine(e + " ");
           continue;
         }
-        else if (i != 5)
+        else if (e != 5)
           Console.Write(i + " ");
         else
           break;
