@@ -147,21 +147,21 @@ namespace ConsoleAppDotnetCore
 
     public static int FibonacciRec(int n)
     {
-      if ((0 == n) || (1 == n))
+      if (n < 2)
       {
         return n;
       }
       else
       {
-        return FibonacciRec(n - 1) + FibonacciRec(n - 2);
+        return FibonacciRec(n - 1) + FibonacciRec(n - 2);        
       }
     }
 
-    public static double FibonacciLinear(double n)
+    public static double FibonacciLoop(double n)
     {
       if (n < 0) throw new InvalidOperationException("No negative number is allowed.");
 
-      if (n < 3) return 1;
+      if (n < 2) return 1;
 
       var (a, b) = (1, 1);
 
@@ -172,6 +172,67 @@ namespace ConsoleAppDotnetCore
         n--;
       }
 
+      return b;
+    }
+
+    public static double FactorialRec(int number)
+    {
+
+      if (number == 0)
+        return 1;
+
+      double fact = number * FactorialRec(number - 1);
+
+      return fact;
+    }
+
+    public static double FactorialLoop(int number)
+    {
+
+      if (number == 0)
+        return 1;
+
+      double factorial = 1;
+      double count = number - (number - 1);
+
+      while (count < number)
+      {
+        factorial *= (count + 1);
+        count++;
+      }
+
+      return factorial;
+    }
+
+    public static double FactorialYoutubeKudvenkat(int number)
+    {
+      if(number == 0)
+      {
+        return 1;
+      }
+
+      double factorial = 1;
+
+      for (int i = number; i > 0; i--)
+      {
+        factorial *= i;
+      }
+      return factorial;
+    }
+
+    public static double FibSimple(int number)
+    {
+      if (number < 2)
+        return 1;
+
+      var (a, b) = (1, 1);
+
+      while(number > 2)
+      {
+        b += a;
+        a = b - a;
+        number--;
+      }
       return b;
     }
   }

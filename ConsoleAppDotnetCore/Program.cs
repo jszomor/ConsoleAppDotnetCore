@@ -51,8 +51,20 @@ namespace ConsoleAppDotnetCore
     static void Main(string[] args)
     {
 
-      var next = new NextGraterPermutation();
-      next.NextLexicographical();
+      //double resultLoop = Practice.FibonacciLoop(3);
+      //double resultRec = Practice.FibonacciRec(3);
+      //Console.WriteLine($"loop: {resultLoop} -- recucrion: {resultRec}");
+
+
+
+       double result =  Practice.FactorialYoutubeKudvenkat(3);
+      Console.WriteLine(result);
+      Console.ReadKey();
+
+
+
+      //var next = new NextGraterPermutation();
+      //next.NextLexicographical();
 
       //    int number = 1;
       //    Method(number);
