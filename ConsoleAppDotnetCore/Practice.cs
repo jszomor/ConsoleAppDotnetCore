@@ -181,7 +181,9 @@ namespace ConsoleAppDotnetCore
       if (number == 0)
         return 1;
 
-      double fact = number * FactorialRec(number - 1);
+      double factRecValue = FactorialRec(number - 1);
+
+      double fact = number * factRecValue;
 
       return fact;
     }
