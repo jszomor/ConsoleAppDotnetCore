@@ -222,6 +222,22 @@ namespace ConsoleAppDotnetCore
       return factorial;
     }
 
+    public static double FactorialYoutubeKudvenkat2(int number)
+    {
+      if (number == 0)
+      {
+        return 1;
+      }
+
+      double factorial = 1;
+
+      for (int i = 1; i < number+1; ++i)
+      {
+        factorial *= i;
+      }
+      return factorial;
+    }
+
     public static double FibSimple(int number)
     {
       if (number < 2)

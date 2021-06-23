@@ -57,7 +57,7 @@ namespace ConsoleAppDotnetCore
 
 
 
-      double result =  Practice.FactorialRec(5);
+      double result =  Practice.FactorialYoutubeKudvenkat2(5);
       Console.WriteLine(result);
       Console.ReadKey();
 

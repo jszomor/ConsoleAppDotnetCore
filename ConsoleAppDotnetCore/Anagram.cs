@@ -20,8 +20,8 @@ namespace ConsoleAppDotnetCore
   {
     public bool CompareAnagram(Words words)
     {
-      string w1 = OrderString(words.Word1);
-      string w2 = OrderString(words.Word2);
+      string w1 = ToLowerString(words.Word1);
+      string w2 = ToLowerString(words.Word2);
 
       int equal = string.Compare(w1, w2);
 
@@ -37,7 +37,7 @@ namespace ConsoleAppDotnetCore
       }
     }
 
-    private string OrderString(string word) => string.Concat(word.ToLower().OrderBy(l => l));
+    private string ToLowerString(string word) => string.Concat(word.ToLower().OrderBy(l => l));
 
     public void Start(Anagram anag)
     {
