@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppDotnetCore", "ConsoleAppDotnetCore\ConsoleAppDotnetCore.csproj", "{A2DC5A76-9219-4069-BF0E-58BE1C867539}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestPractice", "XUnitTestPractice\XUnitTestPractice.csproj", "{FE25B248-E947-464B-9C95-67803B843394}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTestPractice", "XUnitTestPractice\XUnitTestPractice.csproj", "{FE25B248-E947-464B-9C95-67803B843394}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoYouThinkYouCanLINQ", "SoYouThinkYouCanLINQ\SoYouThinkYouCanLINQ.csproj", "{61435BDF-E5EB-4559-BDC9-FA447380785B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{FE25B248-E947-464B-9C95-67803B843394}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE25B248-E947-464B-9C95-67803B843394}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE25B248-E947-464B-9C95-67803B843394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61435BDF-E5EB-4559-BDC9-FA447380785B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61435BDF-E5EB-4559-BDC9-FA447380785B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61435BDF-E5EB-4559-BDC9-FA447380785B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61435BDF-E5EB-4559-BDC9-FA447380785B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

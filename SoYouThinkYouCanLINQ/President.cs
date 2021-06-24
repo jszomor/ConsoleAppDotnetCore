@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleAppDotnetCore.PresidentIterator
+namespace SoYouThinkYouCanLINQ
 {
   public sealed class President
   {

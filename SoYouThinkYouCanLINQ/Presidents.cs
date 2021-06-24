@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleAppDotnetCore.PresidentIterator
+namespace SoYouThinkYouCanLINQ
 {
   public  class Presidents : IEnumerable<President>
   {
@@ -101,6 +101,15 @@ namespace ConsoleAppDotnetCore.PresidentIterator
           yield return item;
         }
       }
+    }
+
+    public bool InstedOfLINQSyntax(President president)
+    {
+      if (president.IsAlive)
+        return true;
+
+      else
+        return false;
     }
   }
 }

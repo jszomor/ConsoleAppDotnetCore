@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleAppDotnetCore.PresidentIterator;
+using System;
 using System.Collections.Generic;
 //using System.Linq;
 
@@ -48,6 +49,8 @@ namespace ConsoleAppDotnetCore
     //    refArgument = refArgument + 44;
     //  }
 
+
+
     static void Main(string[] args)
     {
 
@@ -56,28 +59,7 @@ namespace ConsoleAppDotnetCore
       //Console.WriteLine($"loop: {resultLoop} -- recucrion: {resultRec}");
 
 
-      #region President section
 
-      var preses = new PresidentIterator.Presidents();
-            
-
-      foreach (var item in preses)
-      {
-        Console.WriteLine(item);
-      }
-
-      //behind the scene the complire rewrite the foreach loop similar to the below code
-      using(var enumerator = preses.GetEnumerator())
-      {
-        while(enumerator.MoveNext())
-          Console.WriteLine(enumerator.Current);
-      }
-
-      var alive = from p in preses
-                  where p.IsAlive // Manual implementation of where function from LINQ
-                  select p;
-
-      #endregion
 
 
 
