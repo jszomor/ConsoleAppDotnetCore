@@ -134,7 +134,7 @@ namespace ConsoleAppDotnetCore
       var query = (from i in source
                    group i by i into g
                    orderby g.Count() descending
-                   select new { Key = g.Key, Count = g.Count() }).ToList();
+                   select new { g.Key, count = g.Count() }).ToList();
 
       for (int i = 0; i < 5; i++)
       {
@@ -163,7 +163,7 @@ namespace ConsoleAppDotnetCore
                      from word in words
                      group word by word into g
                      orderby g.Count() descending
-                     select new { Word = g.Key, Occurance = g.Count() }).ToList();
+                     select new { g.Key, Occurance = g.Count() }).ToList();
 
       for (int i = 0; i < 5; i++)
       {
