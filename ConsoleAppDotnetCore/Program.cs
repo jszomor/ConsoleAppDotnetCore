@@ -1,5 +1,4 @@
-﻿using ConsoleAppDotnetCore.PresidentIterator;
-using System;
+﻿using System;
 using System.Collections.Generic;
 //using System.Linq;
 
@@ -54,11 +53,12 @@ namespace ConsoleAppDotnetCore
     static void Main(string[] args)
     {
 
-      //double resultLoop = Practice.FibonacciLoop(3);
-      //double resultRec = Practice.FibonacciRec(3);
-      //Console.WriteLine($"loop: {resultLoop} -- recucrion: {resultRec}");
+      double resultRec2 = Practice.FibonacciLoopReturn1(9);
+      double resultRec = Practice.FibonacciLoopReturnN(9);
+      Console.WriteLine($"Fib1: {resultRec} -- FibN: {resultRec2}");
 
 
+      Console.ReadKey();
 
 
 
@@ -67,7 +67,6 @@ namespace ConsoleAppDotnetCore
 
       //double result =  Practice.FactorialYoutubeKudvenkat2(5);
       //Console.WriteLine(result);
-      Console.ReadKey();
 
 
 

@@ -145,7 +145,7 @@ namespace ConsoleAppDotnetCore
       }                  
     }
 
-    public static int FibonacciRec(int n)
+    public static int FibonacciRecReturnN(int n)
     {
       if (n < 2)
       {
@@ -153,11 +153,24 @@ namespace ConsoleAppDotnetCore
       }
       else
       {
-        return FibonacciRec(n - 1) + FibonacciRec(n - 2);        
+        return FibonacciRecReturnN(n - 1) + FibonacciRecReturnN(n - 2);        
       }
     }
 
-    public static double FibonacciLoop(double n)
+    public static int FibonacciRecReturn1(int n)
+    {
+      if (n < 3)
+      {
+        return 1;
+      }
+      else
+      {
+        return FibonacciRecReturn1(n - 1) + FibonacciRecReturn1(n - 2);
+      }
+    }
+
+
+    public static double FibonacciLoopReturn1(double n)
     {
       if (n < 0) throw new InvalidOperationException("No negative number is allowed.");
 
@@ -166,6 +179,23 @@ namespace ConsoleAppDotnetCore
       var (a, b) = (1, 1);
 
       while(n > 2)
+      {
+        b += a;
+        a = b - a;
+        n--;
+      }
+
+      return b;
+    }
+
+
+    public static double FibonacciLoopReturnN(double n)
+    {
+      if (n < 3) return n;
+
+      var (a, b) = (1, 1);
+
+      while (n > 2)
       {
         b += a;
         a = b - a;
