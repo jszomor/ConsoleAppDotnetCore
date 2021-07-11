@@ -1,5 +1,4 @@
-﻿using ConsoleAppDotnetCore.PresidentIterator;
-using System;
+﻿using System;
 using System.Collections.Generic;
 //using System.Linq;
 
@@ -203,12 +202,12 @@ namespace ConsoleAppDotnetCore
 
       //Occurrences.CountWordDict();
 
-      //int[] numbers = new int[] { 10, 1, 4, 6, 6, 3, 9, 12 };
+      int[] numbers = new int[] { 10, 1, 4, 6, 6, 3, 9, 12 };
 
       //var linkedList = new LinkedList(numbers);
 
-      //var binaryTree = new BinaryTree(numbers);
-      //binaryTree.InOrder(binaryTree.Print);
+      var binaryTree = new BinaryTree(numbers);
+      binaryTree.InOrder(binaryTree.Print);
 
       //var aaronjwood = new aaronjwoodBinarySearchTree.BinarySearchTree();
       //aaronjwood.Start();
