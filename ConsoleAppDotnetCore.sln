@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppDotnetCore", "Con
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTestPractice", "XUnitTestPractice\XUnitTestPractice.csproj", "{FE25B248-E947-464B-9C95-67803B843394}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoYouThinkYouCanLINQ", "SoYouThinkYouCanLINQ\SoYouThinkYouCanLINQ.csproj", "{61435BDF-E5EB-4559-BDC9-FA447380785B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoYouThinkYouCanLINQ", "SoYouThinkYouCanLINQ\SoYouThinkYouCanLINQ.csproj", "{61435BDF-E5EB-4559-BDC9-FA447380785B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackerrank", "Hackerrank\Hackerrank.csproj", "{1ACE79E5-DB42-4657-8E97-93E1E0CE7D5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{61435BDF-E5EB-4559-BDC9-FA447380785B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61435BDF-E5EB-4559-BDC9-FA447380785B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61435BDF-E5EB-4559-BDC9-FA447380785B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ACE79E5-DB42-4657-8E97-93E1E0CE7D5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ACE79E5-DB42-4657-8E97-93E1E0CE7D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ACE79E5-DB42-4657-8E97-93E1E0CE7D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ACE79E5-DB42-4657-8E97-93E1E0CE7D5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
