@@ -47,5 +47,43 @@ namespace Hackerrank
       }
       Console.WriteLine(min);
     }
+
+    public int LuckBalance()
+    {
+      int k = 3;
+      List<List<int>> contests = new List<List<int>>()
+      {
+        new List<int> {5, 1},
+        new List<int> {2, 1},
+        new List<int> {1, 1},
+        new List<int> {8, 1},
+        new List<int> {10, 0},
+        new List<int> {5, 0}
+      };
+
+      int luck = 0;
+      var sortedList = contests.OrderByDescending(n => n[0]).ToList();
+      for (int i = 0; i < contests.Count; i++)
+      {
+        if(sortedList[i][1] == 1)
+        {
+          if(k > 0)
+          {
+            luck += sortedList[i][0];
+            k--;
+          }
+          else
+          {
+            luck -= sortedList[i][0];
+          }
+        }
+        else
+        {
+          luck += sortedList[i][0];
+        }
+      }
+
+      return luck;
+    }
   }
 }

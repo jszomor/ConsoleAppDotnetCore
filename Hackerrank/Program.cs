@@ -8,7 +8,8 @@ namespace Hackerrank
     {
       var greedy = new GreedyAlgorithm();
 
-      greedy.MinimumAbsoluteDifference();
+      //greedy.MinimumAbsoluteDifference();
+      Console.WriteLine(greedy.LuckBalance());
     }
   }
 }
