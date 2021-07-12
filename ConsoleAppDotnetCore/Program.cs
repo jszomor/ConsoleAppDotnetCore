@@ -53,12 +53,12 @@ namespace ConsoleAppDotnetCore
     static void Main(string[] args)
     {
 
-      double resultRec2 = Practice.FibonacciLoopReturn1(9);
-      double resultRec = Practice.FibonacciLoopReturnN(9);
-      Console.WriteLine($"Fib1: {resultRec} -- FibN: {resultRec2}");
+      //double resultRec2 = Practice.FibonacciLoopReturn1(9);
+      //double resultRec = Practice.FibonacciLoopReturnN(9);
+      //Console.WriteLine($"Fib1: {resultRec} -- FibN: {resultRec2}");
 
 
-      Console.ReadKey();
+      //Console.ReadKey();
 
 
 
@@ -202,12 +202,12 @@ namespace ConsoleAppDotnetCore
 
       //Occurrences.CountWordDict();
 
-      int[] numbers = new int[] { 10, 1, 4, 6, 6, 3, 9, 12 };
+      //int[] numbers = new int[] { 10, 1, 4, 6, 6, 3, 9, 12 };
 
       //var linkedList = new LinkedList(numbers);
 
-      var binaryTree = new BinaryTree(numbers);
-      binaryTree.InOrder(binaryTree.Print);
+      //var binaryTree = new BinaryTree(numbers);
+      //binaryTree.InOrder(binaryTree.Print);
 
       //var aaronjwood = new aaronjwoodBinarySearchTree.BinarySearchTree();
       //aaronjwood.Start();
@@ -225,7 +225,9 @@ namespace ConsoleAppDotnetCore
       //var anag = new Anagram();
       //anag.Start(anag);
 
-      //Occurrences.WordCountLINQ2();
+      Occurrences.WordCountLINQ();
+
+      Occurrences.WordCountDict();
 
       //string input = "haveaniceday";
 
