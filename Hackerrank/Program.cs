@@ -7,9 +7,12 @@ namespace Hackerrank
     static void Main(string[] args)
     {
       var greedy = new GreedyAlgorithm();
+      var sorting = new Sorting();
+
+      sorting.FraudulentActivityNotifications();
 
       //greedy.MinimumAbsoluteDifference();
-      Console.WriteLine(greedy.LuckBalance());
+      //Console.WriteLine(greedy.LuckBalance());
     }
   }
 }

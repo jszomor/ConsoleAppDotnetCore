@@ -19,7 +19,7 @@ namespace ConsoleAppDotnetCore
     }
 
     private void QuickSort(int left, int right)
-    {
+    {      
       int pivot = Numbers[left];
       int lhold = left;
       int rhold = right;

@@ -202,7 +202,7 @@ namespace ConsoleAppDotnetCore
 
       //Occurrences.CountWordDict();
 
-      //int[] numbers = new int[] { 10, 1, 4, 6, 6, 3, 9, 12 };
+      int[] numbers = new int[] { 10, 1, 4, 6, 6, 3, 9, 12 };
 
       //var linkedList = new LinkedList(numbers);
 
@@ -212,22 +212,22 @@ namespace ConsoleAppDotnetCore
       //var aaronjwood = new aaronjwoodBinarySearchTree.BinarySearchTree();
       //aaronjwood.Start();
 
-      //var quickSort = new MyArray(numbers);
+      var quickSort = new Sorts(numbers);
 
-      //quickSort.Sort();
+      quickSort.Sort();
 
-      //foreach (var item in numbers)
-      //{
-      //  Console.WriteLine(item);
-      //}
+      foreach (var item in numbers)
+      {
+        Console.WriteLine(item);
+      }
 
 
       //var anag = new Anagram();
       //anag.Start(anag);
 
-      Occurrences.WordCountLINQ();
+      //Occurrences.WordCountLINQ();
 
-      Occurrences.WordCountDict();
+      //Occurrences.WordCountDict();
 
       //string input = "haveaniceday";
 
