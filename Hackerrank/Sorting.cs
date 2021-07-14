@@ -13,7 +13,7 @@ namespace Hackerrank
       int d = 5;
 
       int notification = 0;
-      int[] expenditure = new int[] { 2, 3, 4, 2, 3, 6, 8, 4, 5 };
+      int[] expenditure = new int[] { 6, 3, 9, 12, 8, 9, 8, 4, 5 };
       double[] arr = new double[d];
 
       Array.Copy(expenditure, arr, d);
@@ -21,7 +21,7 @@ namespace Hackerrank
 
       double median;
 
-      for (int i = 0; i < expenditure.Length - d; i++)
+      for (int i = d; i < expenditure.Length; i++)
       {
 
         if (arr.Length % 2 == 0)
@@ -33,13 +33,17 @@ namespace Hackerrank
           median = arr[arr.Length / 2];
         }
 
-        if (median * 2 <= expenditure[d + i])
+        if (median * 2 <= expenditure[i])
         {
           notification++;
         }
 
-        Array.Copy(expenditure, expenditure.GetLowerBound(0) + (i + 1), arr, arr.GetLowerBound(0), d - 1);
-        Array.Sort(arr);
+        int index = Array.BinarySearch(arr, expenditure[i-d]);
+        Array.Copy(arr, index + 1, arr, index, d - index - 1);
+        index = Array.BinarySearch(arr, 0, d - 1, expenditure[i]);
+        index = index >= 0 ? index : ~index;
+        Array.Copy(arr, index, arr, index + 1, d - index - 1);
+        arr[index] = expenditure[i];
 
       }
       Console.WriteLine(notification);
@@ -72,7 +76,7 @@ namespace Hackerrank
     public void activityNotifications()
     {
       int d = 5;
-      int[] expenditure = new int[] { 2, 3, 4, 2, 3, 6, 8, 4, 5 };
+      int[] expenditure = new int[] { 6, 3, 9, 12, 8, 9, 8, 4, 5 };
       int result = 0;
 
       var arr = new int[d];
