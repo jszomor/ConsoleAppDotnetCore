@@ -85,5 +85,45 @@ namespace Hackerrank
 
       return luck;
     }
+
+    public void GreedyFlorist()
+    {
+      int people = 3;
+      int numberOfBuy = 1;
+      int[] flowers = new int[] { 1, 3, 5, 7, 9 };
+      flowers = flowers.OrderByDescending(n => n).ToArray();
+      int totalCost = 0;
+      int round;
+      for (int i = 0; i < flowers.Length; i++)
+      {
+        round = i % people;
+        if (round == 0 && people <= i)
+        {
+          numberOfBuy++;
+        }
+
+        totalCost += flowers[i] * numberOfBuy;
+      }
+
+      Console.WriteLine(totalCost);
+    }
+
+    public void MaxMin()
+    {
+      int maxMinArrayLength = 5;
+      int[] totalArray = new int[] { 4504, 1520, 5857, 4094, 4157, 3902, 822, 6643, 2422, 7288, 8245, 9948, 2822, 1784, 7802, 3142, 9739, 5629, 5413, 7232 };
+
+      Array.Sort(totalArray);
+      int minUnfairness = 1000000000;
+      for (int i = 0; i < totalArray.Length - maxMinArrayLength + 1; i++)
+      {
+        if(totalArray[i + maxMinArrayLength - 1] - totalArray[i] < minUnfairness)
+        {
+          minUnfairness = totalArray[i + maxMinArrayLength - 1] - totalArray[i];
+        }
+      }
+
+      Console.WriteLine(minUnfairness);
+    }
   }
 }

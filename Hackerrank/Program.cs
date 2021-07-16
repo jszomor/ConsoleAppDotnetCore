@@ -8,8 +8,9 @@ namespace Hackerrank
     {
       var greedy = new GreedyAlgorithm();
       var sorting = new Sorting();
+      var arrays = new Arrays();
 
-      sorting.activityNotifications();
+      arrays.NewYearChaos();
 
       //greedy.MinimumAbsoluteDifference();
       //Console.WriteLine(greedy.LuckBalance());
