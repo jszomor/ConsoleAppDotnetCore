@@ -10,7 +10,9 @@ namespace Hackerrank
       var sorting = new Sorting();
       var arrays = new Arrays();
 
-      arrays.NewYearChaos();
+      var minSwap2 = new Arrays.MinimumSwap2();
+
+      minSwap2.Xyz();
 
       //greedy.MinimumAbsoluteDifference();
       //Console.WriteLine(greedy.LuckBalance());
