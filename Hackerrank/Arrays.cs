@@ -42,7 +42,7 @@ namespace Hackerrank
       {
         int[] arr = new int[] { 7, 1, 3, 2, 4, 5, 6 };
 
-        QuickSort(arr, 0, arr.Length-1);
+        QuickSort(arr, 0, arr.Length - 1);
       }
 
 
@@ -84,23 +84,27 @@ namespace Hackerrank
         arr[b] = temp;
       }
 
-      public void Xyz()
+      public void MinSwap()
       {
-        int[] queue = new int[] { 1, 2, 5, 3, 7, 8, 6, 4 };
+        int[] arr = new int[] { 4, 3, 1, 2 };
 
-        int pivotValue = queue[queue.Length - 1];
-        int pivotIndex = 0;
+        int currentValue;
+        int vIndex;
+        int swap = 0;
 
-        for (int i = 0; i < queue.Length; i++)
+        for (int i = 0; i < arr.Length; i++)
         {
-          if(pivotValue > queue[i])
+          while (arr[i] != i + 1)
           {
-            Swap(queue, i, pivotIndex);
-            pivotIndex++;
+            currentValue = arr[i];
+            vIndex = currentValue - 1;
+
+            Swap(arr, vIndex, i);
+            swap++;
           }
         }
 
-        Swap(queue, queue.Length - 1, pivotIndex);
+        Console.WriteLine(swap);
       }
     }
   }

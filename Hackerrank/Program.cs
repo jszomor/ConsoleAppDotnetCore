@@ -12,7 +12,7 @@ namespace Hackerrank
 
       var minSwap2 = new Arrays.MinimumSwap2();
 
-      minSwap2.Xyz();
+      minSwap2.MinSwap();
 
       //greedy.MinimumAbsoluteDifference();
       //Console.WriteLine(greedy.LuckBalance());
