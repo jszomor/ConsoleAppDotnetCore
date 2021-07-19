@@ -38,13 +38,40 @@ namespace Hackerrank
 
     public class MinimumSwap2
     {
+      public void MinSwap2Method()
+      {
+        int[] arr = new int[] { 4, 3, 1, 2 };
+
+        int currentValue;
+        int vIndex;
+        int swap = 0;
+
+        for (int i = 0; i < arr.Length; i++)
+        {
+          while (arr[i] != i + 1)
+          {
+            currentValue = arr[i];
+            vIndex = currentValue - 1;
+
+            Swap(arr, vIndex, i);
+            swap++;
+          }
+        }
+
+        Console.WriteLine(swap);
+      }
+
       public void CallQuickSort()
       {
         int[] arr = new int[] { 7, 1, 3, 2, 4, 5, 6 };
 
         QuickSort(arr, 0, arr.Length - 1);
-      }
 
+        foreach (var item in arr)
+        {
+          Console.WriteLine(item);
+        }
+      }
 
       public void QuickSort(int[] arr, int start, int end)
       {
@@ -82,29 +109,6 @@ namespace Hackerrank
         temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;
-      }
-
-      public void MinSwap()
-      {
-        int[] arr = new int[] { 4, 3, 1, 2 };
-
-        int currentValue;
-        int vIndex;
-        int swap = 0;
-
-        for (int i = 0; i < arr.Length; i++)
-        {
-          while (arr[i] != i + 1)
-          {
-            currentValue = arr[i];
-            vIndex = currentValue - 1;
-
-            Swap(arr, vIndex, i);
-            swap++;
-          }
-        }
-
-        Console.WriteLine(swap);
       }
     }
   }
