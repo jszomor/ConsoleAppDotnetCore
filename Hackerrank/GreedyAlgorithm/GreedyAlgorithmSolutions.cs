@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hackerrank
+namespace Hackerrank.GreedyAlgorithm
 {
-  class GreedyAlgorithm
+  public class GreedyAlgorithmSolutions
   {
     public void MinimumAbsoluteDifference()
     {
