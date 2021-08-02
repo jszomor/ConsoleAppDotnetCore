@@ -56,10 +56,10 @@ namespace Hackerrank.GreedyAlgorithm
           }
         }
 
-        int numberOfRequiredLetters = requiredLetter[A[j]];
-        int numberOfUsedLetters = usedLetter[A[j]];
+        //int numberOfRequiredLetters = requiredLetter[A[j]];
+        //int numberOfUsedLetters = usedLetter[A[j]];
 
-        while (j > 0 && A[j] < A[j - 1] && numberOfUsedLetters <= numberOfRequiredLetters)
+        while (j > 0 && A[j] < A[j - 1] && usedLetter[A[j - 1]] <= requiredLetter[A[j - 1]])
         {
           inputString[A[j - 1]]++;
           A[j - 1] = A[j];
