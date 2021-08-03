@@ -13,7 +13,7 @@ namespace Hackerrank.GreedyAlgorithm
       //bdabaceadaedaaaeaecdeadababdbeaeeacacaba >> aaaaaabaaceededecbdb
       //djjcddjggbiigjhfghehhbgdigjicafgjcehhfgifadihiajgciagicdahcbajjbhifjiaajigdgdfhdiijjgaiejgegbbiigida >> aaaaabccigicgjihidfiejfijgidgbhhehgfhjgiibggjddjjd
       //abcdefgabcdefg >> bcdefga
-      string s = "djjcddjggbiigjhfghehhbgdigjicafgjcehhfgifadihiajgciagicdahcbajjbhifjiaajigdgdfhdiijjgaiejgegbbiigida"; 
+      string s = "djjcddjggbiigjhfghehhbgdigjicafgjcehhfgifadihiajgciagicdahcbajjbhifjiaajigdgdfhdiijjgaiejgegbbiigida";
       char[] inputCharArray = s.ToCharArray();
 
       var unusedLetters = new Dictionary<char, int>();
@@ -30,6 +30,7 @@ namespace Hackerrank.GreedyAlgorithm
       }
 
       var usedLetters = new Dictionary<char, int>();
+      var reInsertedLetters = new Dictionary<char, int>();
       var requiredLetter = new Dictionary<char, int>();
 
       foreach (var item in unusedLetters)
@@ -39,6 +40,7 @@ namespace Hackerrank.GreedyAlgorithm
           requiredLetter.Add(item.Key, value / 2);
         }
         usedLetters.Add(item.Key, 0);
+        reInsertedLetters.Add(item.Key, 0);
       }
 
       char[] A = new char[inputCharArray.Length / 2];
@@ -46,7 +48,7 @@ namespace Hackerrank.GreedyAlgorithm
       for (int i = inputCharArray.Length - 1; i >= 0; i--)
       {
 
-        if(inputCharArray[i] == 'h')
+        if (inputCharArray[i] == 'h')
         {
           Console.WriteLine();
         }
@@ -54,16 +56,22 @@ namespace Hackerrank.GreedyAlgorithm
         if (unusedLetters[inputCharArray[i]] > requiredLetter[inputCharArray[i]])
         {
           A[j] = inputCharArray[i];
+          unusedLetters[A[j]]--;
+          usedLetters[A[j]]++;
 
-          //if (unusedLetters.ContainsKey(A[j]))
-          {
-            unusedLetters[A[j]]--;
-            usedLetters[A[j]]++;
-          }
+          //int k = 0;
+          //foreach (var item in usedLetters)
+          //{
+          //  usedLetters[item.Key] -= reInsertedLetters.ElementAt(k).Value;
+          //  reInsertedLetters[item.Key] = 0;
+          //  k++;
+          //}
+
 
           while (j > 0 && A[j] < A[j - 1] && usedLetters[A[j - 1]] <= requiredLetter[A[j - 1]])
           {
             unusedLetters[A[j - 1]]++;
+            //reInsertedLetters[A[j - 1]]++;
             A[j - 1] = A[j];
             A[j] = '\0';
             j--;
