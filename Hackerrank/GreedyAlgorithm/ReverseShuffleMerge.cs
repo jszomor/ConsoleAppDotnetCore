@@ -46,7 +46,7 @@ namespace Hackerrank.GreedyAlgorithm
       for (int i = inputCharArray.Length - 1; i >= 0; i--)
       {
 
-        if(j == 19)
+        if(inputCharArray[i] == 'h')
         {
           Console.WriteLine();
         }
