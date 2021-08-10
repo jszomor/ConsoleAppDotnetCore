@@ -202,24 +202,25 @@ namespace ConsoleAppDotnetCore
 
       //Occurrences.CountWordDict();
 
-      int[] numbers = new int[] { 10, 1, 4, 6, 6, 3, 9, 12 };
+      int[] numbers = new int[] { 20, 26, 4, 15, 1, 23, 9, 12, 3, 33, 13, 88, 17};
 
       //var linkedList = new LinkedList(numbers);
-
-      //var binaryTree = new BinaryTree(numbers);
-      //binaryTree.InOrder(binaryTree.Print);
+       
+      var binaryTree = new BinaryTree2(numbers);
+      binaryTree.InOrder(binaryTree.Print);
+      Console.ReadKey();
 
       //var aaronjwood = new aaronjwoodBinarySearchTree.BinarySearchTree();
       //aaronjwood.Start();
 
-      var quickSort = new Sorts(numbers);
+      //var quickSort = new Sorts(numbers);
 
-      quickSort.Sort();
+      //quickSort.Sort();
 
-      foreach (var item in numbers)
-      {
-        Console.WriteLine(item);
-      }
+      //foreach (var item in numbers)
+      //{
+      //  Console.WriteLine(item);
+      //}
 
 
       //var anag = new Anagram();
