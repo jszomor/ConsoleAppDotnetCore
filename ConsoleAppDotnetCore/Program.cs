@@ -208,6 +208,7 @@ namespace ConsoleAppDotnetCore
        
       var binaryTree = new BinaryTree2(numbers);
       binaryTree.InOrder(binaryTree.Print);
+      binaryTree.SearchKey(4);
       Console.ReadKey();
 
       //var aaronjwood = new aaronjwoodBinarySearchTree.BinarySearchTree();

@@ -99,14 +99,20 @@ namespace ConsoleAppDotnetCore
       _inOrderBetween(root.Right, print);
     }
 
-
-    private void searchKey(Node2 root, Action<int> print)
+    public void SearchKey(int key)
     {
-      if (root == null) return;
-      
-      searchKey(root.Left, print);
-        print(root.Value);
-      searchKey(root.Right, print);      
+      int searchedKey = searchKeyRec(Root, key).Value;
+      Console.WriteLine(searchedKey);
+    }
+
+    private Node2 searchKeyRec(Node2 root, int key)
+    {
+      if (root == null || root.Value == key) return root;
+
+      if(root.Value > key)      
+      return searchKeyRec(root.Left, key);
+
+      return searchKeyRec(root.Right, key);      
     }
 
 
