@@ -202,7 +202,7 @@ namespace ConsoleAppDotnetCore
 
       //Occurrences.CountWordDict();
 
-      int[] numbers = new int[] { 20, 26, 4, 15, 1, 23, 9, 12, 3, 33, 13, 88, 17};
+      int[] numbers = new int[] { 20, 26, 4, 15, 1, 23, 9, 12, 3, 33, 13, 88, 26, 17};
 
       //var linkedList = new LinkedList(numbers);
        

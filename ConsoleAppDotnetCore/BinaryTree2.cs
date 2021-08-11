@@ -21,10 +21,9 @@ namespace ConsoleAppDotnetCore
     Node2 Root;
     public BinaryTree2(int[] values)
     {
-      Node2 root = null;
       foreach (var value in values)
       {
-        //Insert(value);
+        Insert(value);
         Root = InsertRec(Root, value);
       }
     }
@@ -71,12 +70,29 @@ namespace ConsoleAppDotnetCore
       }
     }
 
+    private Node2 InsertRec(Node2 root, int value)
+    {
+      if (root == null)
+      {
+        return new Node2(value);
+      }
+
+      if (value < root.Value)
+      {
+        root.Left = InsertRec(root.Left, value);
+      }
+      else
+      {
+        root.Right = InsertRec(root.Right, value);
+      }
+
+      return root;
+    }
+
     public void InOrder(Action<int> action)
     {
       _inOrder(Root, action);
     }
-
-    public int Row { get; set; }
 
     private void _inOrder(Node2 root, Action<int> print)
     {
@@ -117,28 +133,6 @@ namespace ConsoleAppDotnetCore
       return searchKeyRec(root.Right, key);
     }
 
-    private Node2 InsertRec(Node2 root, int value)
-    {
-      if (root == null)
-      {
-        return new Node2(value);
-      }
-
-      if (value < root.Value)
-      {
-        root.Left = InsertRec(root.Left, value);
-      }
-      else if (value > root.Value)
-      {
-        root.Right = InsertRec(root.Right, value);
-      }
-      else
-      {
-        return null;
-      }
-
-      return root;
-    }
 
 
     public void Print(int value)
