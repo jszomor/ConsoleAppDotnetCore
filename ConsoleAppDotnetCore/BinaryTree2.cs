@@ -18,15 +18,17 @@ namespace ConsoleAppDotnetCore
 
   public class BinaryTree2
   {
+    Node2 Root;
     public BinaryTree2(int[] values)
     {
+      Node2 root = null;
       foreach (var value in values)
       {
-        Insert(value);
+        //Insert(value);
+        Root = InsertRec(Root, value);
       }
     }
 
-    Node2 Root;
 
     private void Insert(int value)
     {
@@ -109,10 +111,33 @@ namespace ConsoleAppDotnetCore
     {
       if (root == null || root.Value == key) return root;
 
-      if(root.Value > key)      
-      return searchKeyRec(root.Left, key);
+      if (root.Value > key)
+        return searchKeyRec(root.Left, key);
 
-      return searchKeyRec(root.Right, key);      
+      return searchKeyRec(root.Right, key);
+    }
+
+    private Node2 InsertRec(Node2 root, int value)
+    {
+      if (root == null)
+      {
+        return new Node2(value);
+      }
+
+      if (value < root.Value)
+      {
+        root.Left = InsertRec(root.Left, value);
+      }
+      else if (value > root.Value)
+      {
+        root.Right = InsertRec(root.Right, value);
+      }
+      else
+      {
+        return null;
+      }
+
+      return root;
     }
 
 
