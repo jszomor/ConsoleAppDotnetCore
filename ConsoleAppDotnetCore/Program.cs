@@ -205,10 +205,14 @@ namespace ConsoleAppDotnetCore
       int[] numbers = new int[] { 20, 26, 4, 15, 1, 23, 9, 12, 3, 33, 13, 88, 26, 17};
 
       //var linkedList = new LinkedList(numbers);
-       
-      var binaryTree = new BinaryTree2(numbers);
-      binaryTree.InOrder(binaryTree.Print);
-      binaryTree.SearchKey(4);
+
+      var palindrome = new Palindrome();
+      palindrome.Check("abcddcba");
+
+
+      var binTree = new BinTree(numbers);
+      binTree.InOrderTraversal(binTree.PrintTree);
+      //binaryTree.SearchKey(4);
       Console.ReadKey();
 
       //var aaronjwood = new aaronjwoodBinarySearchTree.BinarySearchTree();
