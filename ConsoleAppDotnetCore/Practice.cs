@@ -283,5 +283,17 @@ namespace ConsoleAppDotnetCore
       }
       return b;
     }
+
+    public static int Factorial(int number)
+    {
+      int result = 1;
+
+      for (int i = 0; i < number; i++)
+      {
+        result *= i + 1;
+      }
+
+      return result;
+    }
   }
 }

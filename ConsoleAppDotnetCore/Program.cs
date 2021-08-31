@@ -211,6 +211,8 @@ namespace ConsoleAppDotnetCore
       binaryTree.SearchKey(4);
       Console.ReadKey();
 
+      Practice.FactorialRec(5);
+
       //var aaronjwood = new aaronjwoodBinarySearchTree.BinarySearchTree();
       //aaronjwood.Start();
 
