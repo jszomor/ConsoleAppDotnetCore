@@ -8,28 +8,33 @@ namespace Hackerrank.Search
 {
   public class TripleSum
   {
-    public int[] A_array = new int[] { 1, 2, 3, 55, 78 }; // 1, 2, 3, 4, 5, 6, 7, 8 }; // 2, 3, 5, 1, 6, 9, 11, 3 };
-    public int[] B_array = new int[] { 30, 60 }; // 5, 6, 7, 8, 9, 10, 11, 12 }; // 2, 3, 5, 1, 6, 9, 11, 3 };
-    public int[] C_array = new int[] { 25, 28, 32 }; // 3, 4, 5, 6, 7, 8, 9, 10 }; // 2, 3, 5, 1, 6, 9, 11, 3 };
+    public int[] a = new int[] { 5, 4, 1 }; // 1, 2, 3, 4, 5, 6, 7, 8 }; // 2, 3, 5, 1, 6, 9, 11, 3 };
+    public int[] b = new int[] { 3, 3, 2 }; // 5, 6, 7, 8, 9, 10, 11, 12 }; // 2, 3, 5, 1, 6, 9, 11, 3 };
+    public int[] c = new int[] { 1, 3, 2 }; // 3, 4, 5, 6, 7, 8, 9, 10 }; // 2, 3, 5, 1, 6, 9, 11, 3 };
 
     public long Triplets ()
     {
-      //A[i] <= B[j] >= C[k]
+      a = a.Distinct().ToArray();
+      b = b.Distinct().ToArray();
+      c = c.Distinct().ToArray();
+
+      Array.Sort(a);
+      Array.Sort(b);
+      Array.Sort(c);
 
       int j = 0;
-      //int i = 0;
       int k = 0;
 
       int result = 0;
 
-      for (int i = 0; i < B_array.Length; i++)
+      for (int i = 0; i < b.Length; i++)
       {
-        while (A_array[j] <= B_array[i])
+        while (a.Length > j && a[j] <= b[i])
         {
           j++;          
         }
 
-        while (B_array[i] >= C_array[k] && )
+        while (c.Length > k && b[i] >= c[k])
         {
           k++;
         }
