@@ -8,14 +8,18 @@ namespace YieldReturnDemoApp
   {
     static void Main(string[] args)
     {
-      var results = Generators.PrimeNumber().Take(11);
+      //var results = Generators.PrimeNumber().Take(11);
 
-      foreach (var item in results)
-      {
-        Console.WriteLine(item);
-      }
+      //foreach (var item in results)
+      //{
+      //  Console.WriteLine(item);
+      //}
 
-      Console.ReadKey();
+      //Console.ReadKey();
+
+      var prime = new PrimeNumber();
+
+      prime.GetPrimeNumber();
     }
   }
 
