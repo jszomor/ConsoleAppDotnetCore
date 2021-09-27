@@ -6,11 +6,13 @@ using System.Text;
 namespace InterView
 {
   /*   
-    Készíteni kell egy algoritmust ami leirja egy számsorozatról hogy melyik elemből hány darab található és azt visszadja. 
+    Look & Say
+    Készíteni kell egy algoritmust ami megszámolja egy karaktersorozat egyes elemeit,
+    hogy melyikből hány darab található majd kiegészíti a darabszámot vele és azt visszadja. 
     Az első szám a darabaszámot mutatja a második azt a számot amit megszámoltunk.  
 
     A zárójelben szereplő segítség mindig ez előzős sorra utal
-    1 (1)
+    1
     11 (1db 1-es) '11'
     21 (2db 1-es) '21'
     1211 (1db 2-es, 1db 1-es) '12 11'
