@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ConsoleAppDotnetCore\ConsoleAppDotnetCore.csproj" />
+    <ProjectReference Include="..\InterView\InterView.csproj" />
   </ItemGroup>
 
 </Project>

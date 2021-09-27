@@ -1,4 +1,5 @@
 using ConsoleAppDotnetCore;
+using InterView;
 using System;
 using Xunit;
 
@@ -30,6 +31,21 @@ namespace XUnitTestPractice
       bool isAnnagramm = anag.CompareAnagram(words);
 
       Assert.False(isAnnagramm);
+    }
+
+    [Fact]
+    public void StringShouldBeEqual()
+    {
+      string a = new String("szoveg");
+      string b = new String("szoveg");
+
+      var strings = new StringsComapre();
+
+      var actual = strings.Test(a, b);
+
+      bool expected = true;
+
+      Assert.Equal(expected, actual);
     }
   }
 }
