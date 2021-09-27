@@ -23,24 +23,23 @@ namespace InterView
     {
       string input = "1";
 
-      Stopwatch stopwatch2 = new Stopwatch();
-      stopwatch2.Start();
+      Stopwatch stopwatch = new Stopwatch();
+      stopwatch.Start();
       for (int i = 0; i < 10000000; i++)
       {
         LookSubString(input);
       }
-      stopwatch2.Stop();
-      TimeSpan ts2 = stopwatch2.Elapsed;
-      Console.WriteLine($"{ts2.Milliseconds} milliseconds elapsed for LookSubString function.");
+      stopwatch.Stop();
+      TimeSpan ts = stopwatch.Elapsed;
+      Console.WriteLine($"{ts.Milliseconds} milliseconds elapsed for LookSubString function.");
 
-      Stopwatch stopwatch = new Stopwatch();
       stopwatch.Start();
       for (int i = 0; i < 10000000; i++)
       {
         LookDoubleLoop(input);
       }
       stopwatch.Stop();
-      TimeSpan ts = stopwatch.Elapsed;
+      ts = stopwatch.Elapsed;
       Console.WriteLine($"{ts.Milliseconds} milliseconds elapsed for LookDoubleLoop function.");
     }
 
