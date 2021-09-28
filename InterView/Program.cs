@@ -33,10 +33,7 @@ namespace InterView
       //myObject.f();
       //myObject.g();
 
-      var ls = new LookAndSay();
-      ls.Look();
-      
-
+      LookAndSay.Look();
 
       Console.ReadKey();
 

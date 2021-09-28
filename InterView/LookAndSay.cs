@@ -21,9 +21,9 @@ namespace InterView
 
   public class LookAndSay
   {
-    int Loop = 1;
+    static int Loop = 1;
 
-    public void Look()
+    public static void Look()
     {
       string input = "1";
 
@@ -38,7 +38,7 @@ namespace InterView
 
     }
 
-    private string Look(string input)
+    private static string Look(string input)
     {
       var sb = new StringBuilder();
 
