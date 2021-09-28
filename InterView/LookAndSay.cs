@@ -21,63 +21,30 @@ namespace InterView
 
   public class LookAndSay
   {
+    int Loop = 1;
+
     public void Look()
     {
       string input = "1";
 
       Stopwatch stopwatch = new Stopwatch();
       stopwatch.Start();
-      for (int i = 0; i < 10000000; i++)
-      {
-        LookSubString(input);
-      }
+
+      Look(input);
+
       stopwatch.Stop();
       TimeSpan ts = stopwatch.Elapsed;
-      Console.WriteLine($"{ts.Milliseconds} milliseconds elapsed for LookSubString function.");
+      Console.WriteLine($"{ts.Milliseconds} millisecond.");
 
-      stopwatch.Start();
-      for (int i = 0; i < 10000000; i++)
-      {
-        LookDoubleLoop(input);
-      }
-      stopwatch.Stop();
-      ts = stopwatch.Elapsed;
-      Console.WriteLine($"{ts.Milliseconds} milliseconds elapsed for LookDoubleLoop function.");
     }
 
-    private string LookDoubleLoop(string input)
+    private string Look(string input)
     {
       var sb = new StringBuilder();
 
-      int i;
-      int counter = 1;
-
-      if (input == null || string.IsNullOrEmpty(input))
+      if (input == null || string.IsNullOrEmpty(input) || Loop == 60)
       {
-        return "";
-      }
-
-      for (i = 0; i < input.Length; i++)
-      {
-        while (input.Length > i + 1 && input[i] == input[i + 1])
-        {
-          i++;
-          counter++;
-        }
-        sb.Append($"{counter}").Append($"{input}", i, 1);
-        counter = 1;
-      }
-
-      return sb.ToString();
-    }
-
-    private string LookSubString(string input)
-    {
-      var sb = new StringBuilder();
-
-      if (input == null || string.IsNullOrEmpty(input))
-      {
-        return "";
+        return null;
       }
 
       int marker = 0;
@@ -86,17 +53,14 @@ namespace InterView
       {
         if (input.IndexOf(input[marker]) != input.IndexOf(input[i]))
         {
-          string digitsTotal = input.Substring(marker, i - marker);
-          sb.Append(digitsTotal.Length).Append(input[marker]);
+          sb.Append(i - marker).Append(input[marker]);
           marker = i;
         }
       }
+      sb.Append(input.Length - marker).Append(input[marker]);
 
-      string subS = input.Substring(marker, input.Length - marker);
-
-      sb.Append(subS.Length).Append(input[marker]);
-
-      return sb.ToString();
+      Loop++;
+      return Look(sb.ToString());
     }
   }
 }
