@@ -6,32 +6,31 @@ namespace YieldReturnDemoApp
   public class PrimeNumber
   {
 
-    public void GetPrimeNumber()
+    public static void GetPrimeNumber()
     {
-      int i = 1;
-      while(i < 30)
+      int value = 1;
+      while(value < 30)
       {
-        if(CheckNumber(i) && i != 4)
+        if(CheckNumber(value))
         {
-          Console.WriteLine(i);
+          Console.WriteLine(value);
         }
 
-        i++;
+        value++;
       }
-
-      Console.ReadKey();
     }
     
-    bool CheckNumber(int value)
+    public static bool CheckNumber(int value)
     {
       bool isPrime = true;
 
-      for (int i = 2; i < value / 2; i++)
+      for (int i = 2; i <= value / 2; i++)
       {
         if(value % i == 0)
         {
-          isPrime = false;
-          return isPrime;
+          Console.WriteLine(i);
+          //isPrime = false;
+          //return isPrime;
         }
       }
 

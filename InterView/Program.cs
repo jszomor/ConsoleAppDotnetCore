@@ -33,7 +33,27 @@ namespace InterView
       //myObject.f();
       //myObject.g();
 
-      LookAndSay.Look();
+      //LookAndSay.Look();
+
+
+      //Console.WriteLine("Enter number:");
+
+      //int number = 10;
+
+      //while (number < 100)
+      //{
+      //  string result = EventPractice.Call(number, "EUR");
+      //  number = Convert.ToInt32(Console.ReadLine());
+
+      //  Console.WriteLine(result);
+      //}
+
+
+
+      //BizzFuzz.Solution1();
+
+      CoinChallenge.Solution1();
+
 
       Console.ReadKey();
 

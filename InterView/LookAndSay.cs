@@ -51,14 +51,14 @@ namespace InterView
 
       for (int i = 0; i < input.Length; i++)
       {
-        if (input.IndexOf(input[marker]) != input.IndexOf(input[i]))
+        if (input[marker] != input[i])
         {
           sb.Append(i - marker).Append(input[marker]);
           marker = i;
         }
       }
       sb.Append(input.Length - marker).Append(input[marker]);
-
+      //Console.WriteLine(sb);
       Loop++;
       return Look(sb.ToString());
     }

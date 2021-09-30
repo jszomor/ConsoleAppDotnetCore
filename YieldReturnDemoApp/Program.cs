@@ -17,9 +17,15 @@ namespace YieldReturnDemoApp
 
       //Console.ReadKey();
 
-      var prime = new PrimeNumber();
+      //var prime = new PrimeNumber();
 
-      prime.GetPrimeNumber();
+      //prime.GetPrimeNumber();
+
+      //PrimeNumber.GetPrimeNumber();
+
+
+      Console.ReadKey();
+
     }
   }
 
