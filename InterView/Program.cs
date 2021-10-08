@@ -52,8 +52,11 @@ namespace InterView
 
       //BizzFuzz.Solution1();
 
-      CoinChallenge.Solution1();
+      //CoinChallenge.Solution1();
 
+
+      var values = new int[] { 4, 12, 54, 22, 99, 76, 34 };
+      BubbleSort.SortTheBubble(values);
 
       Console.ReadKey();
 

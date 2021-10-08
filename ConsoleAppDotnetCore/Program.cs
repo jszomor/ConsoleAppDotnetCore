@@ -60,8 +60,11 @@ namespace ConsoleAppDotnetCore
 
       //Console.ReadKey();
 
+      var values = new int[] {4,12,54,22,99,76,34 };
 
+      var binTree2 = new BinTree2(values);
 
+      binTree2.InOrder();
 
       //var randomResult = LinqGenerators.GetUniqueIdByArray(20);
 
@@ -202,20 +205,20 @@ namespace ConsoleAppDotnetCore
 
       //Occurrences.CountWordDict();
 
-      int[] numbers = new int[] { 20, 26, 4, 15, 1, 23, 9, 12, 3, 33, 13, 88, 26, 17};
+      //int[] numbers = new int[] { 20, 26, 4, 15, 1, 23, 9, 12, 3, 33, 13, 88, 26, 17};
 
       //var linkedList = new LinkedList(numbers);
 
-      var palindrome = new Palindrome();
-      palindrome.Check("abcddcba");
+      //var palindrome = new Palindrome();
+      //palindrome.Check("abcddcba");
 
 
-      var binTree = new BinTree(numbers);
-      binTree.InOrderTraversal(binTree.PrintTree);
+      //var binTree = new BinTree(numbers);
+      //binTree.InOrderTraversal(binTree.PrintTree);
       //binaryTree.SearchKey(4);
       Console.ReadKey();
 
-      Practice.FactorialRec(5);
+      //Practice.FactorialRec(5);
 
       //var aaronjwood = new aaronjwoodBinarySearchTree.BinarySearchTree();
       //aaronjwood.Start();
