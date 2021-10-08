@@ -55,8 +55,10 @@ namespace InterView
       //CoinChallenge.Solution1();
 
 
-      var values = new int[] { 4, 12, 54, 22, 99, 76, 34 };
-      BubbleSort.SortTheBubble(values);
+      //var values = new int[] { 4, 12, 54, 22, 99, 76, 34 };
+      //BubbleSort.SortTheBubble(values);
+
+      StringsWorker.SplitString("AlmaKörteBanán");
 
       Console.ReadKey();
 

@@ -39,9 +39,9 @@ namespace XUnitTestPractice
       string a = new String("szoveg");
       string b = new String("szoveg");
 
-      var strings = new StringsComapre();
+      var strings = new StringsWorker();
 
-      var actual = strings.Test(a, b);
+      var actual = StringsWorker.Test(a, b);
 
       bool expected = true;
 
