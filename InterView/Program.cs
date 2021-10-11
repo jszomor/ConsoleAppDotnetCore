@@ -58,7 +58,9 @@ namespace InterView
       //var values = new int[] { 4, 12, 54, 22, 99, 76, 34 };
       //BubbleSort.SortTheBubble(values);
 
-      StringsWorker.SplitString("AlmaKörteBanán");
+      //StringsWorker.SplitString("AlmaKörteBanán");
+
+      Console.WriteLine(FibonacciFactory.FibRec(10));
 
       Console.ReadKey();
 
