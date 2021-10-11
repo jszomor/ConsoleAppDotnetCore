@@ -9,14 +9,14 @@ namespace InterView
     // 1 1 2 3 5 8 13 21 34 55
     public static int Fib(int n)
     {
-      if(n < 3)
+      if (n < 3)
       {
         return n;
       }
 
       var (a, b) = (1, 1);
 
-      while(n >= 3)
+      while (n >= 3)
       {
         b += a;
         a = b - a;
@@ -29,14 +29,16 @@ namespace InterView
 
     public static int FibRec(int n)
     {
-      if(n < 2)
+      if (n < 2)
       {
         return n;
       }
+      else
+      {
+        int result = FibRec(n - 2) + FibRec(n - 1);
 
-      int result = FibRec(n - 2) + FibRec(n - 1);
-
-      return result;
+        return result;
+      }
     }
   }
 }
