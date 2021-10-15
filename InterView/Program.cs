@@ -60,7 +60,9 @@ namespace InterView
 
       //StringsWorker.SplitString("AlmaKörteBanán");
 
-      Console.WriteLine(FibonacciFactory.FibRec(10));
+      //Console.WriteLine(FibonacciFactory.FibRec(10));
+
+      Cube.DropCube();
 
       Console.ReadKey();
 
