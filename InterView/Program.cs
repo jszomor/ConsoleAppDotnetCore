@@ -12,6 +12,9 @@ namespace InterView
   {
     static void Main(string[] args)
     {
+      int abcCba = ZabZab.DoZabzab(out int abc, ZabZab.Cba);
+
+      Console.WriteLine(abcCba);
 
       //for (int i = 0; i < 4; i++)
       //{
