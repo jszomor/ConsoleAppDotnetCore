@@ -52,6 +52,10 @@ namespace ConsoleAppDotnetCore
 
     static void Main(string[] args)
     {
+      int[] values = new[] { 7, 2, 1, 8, 6, 3, 5, 4 };
+
+      var qSoer = new Sorts(values);
+      qSoer.Sort();
 
       //double resultRec2 = Practice.FibonacciLoopReturn1(9);
       //double resultRec = Practice.FibonacciLoopReturnN(9);
@@ -60,11 +64,11 @@ namespace ConsoleAppDotnetCore
 
       //Console.ReadKey();
 
-      var values = new int[] {4,12,54,22,99,76,34 };
+      //var values = new int[] {4,12,54,22,99,76,34 };
 
-      var binTree2 = new BinTree2(values);
+      //var binTree2 = new BinTree2(values);
 
-      binTree2.InOrder();
+      //binTree2.InOrder();
 
       //var randomResult = LinqGenerators.GetUniqueIdByArray(20);
 
